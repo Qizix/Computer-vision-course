@@ -246,5 +246,8 @@ with mp_face_detection.FaceDetection(model_selection=0, min_detection_confidence
             cv2.waitKey(25)
 
             ret, frame = cap.read()
+            
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
 
         cap.release()
